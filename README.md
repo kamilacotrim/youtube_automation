@@ -1,5 +1,34 @@
 # youtube_automation
 
+Informação é um instrumento poderoso que precisa ser bem filtrado. 
+Na pior das hipóteses, você afoga com tanta informação - tanto úteis quanto inúteis -,
+ou você usa sem medir as consequências externas.  
+
+Quando falamos de automação, a preocupação não deveria ser com robôs fazendo trabalho de humanos,
+mas a responsabilidade de um humano em produzir uma grande quantidade de informação tendo um alcance global em pouco tempo.
+
+Programadores são ensinados a quebrar o problema em partes menores sem perder o panorama total do quebra-cabeça.
+
+primera parte:
+- Autoconhecimento. Não faça nada sem ter objetivos legítimos e benéficos para você e as pessoas em sua volta.
+é a parte mais demorada e você não pode negligenciá-la senão você vai desistir na primeira linha de código que não tiver "hello, world".
+
+segunda parte:
+- Identifique um problema na sociedade que você queira resolver
+
+
+terceira parte:
+- Pegue o café e vamos para o código.
+
+
+
+
+Instale as bibliotecas necessárias. Se você não sabe inglês, dá um google aí.
+
+Não precisa instalar o transformers do Hugging Face porque a biblioteca chamada deepmultilingualpunctuation
+já tem o transformers e pytorch, assim você vai evitar conflitos de dependências.
+
+
 ```
 import streamlit as st
 from pytube import YouTube
