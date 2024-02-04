@@ -61,9 +61,9 @@ def get_youtube_transcript(video_id):
 ```
 
 Traduza o transcript usando modelos pré-treinados do Hugging Face (se você quiser pode criar o seu próprio modelo, mas isso vai te exigir um pouco mais).<br />
-Nessa parte eu tive um problema com o tamanho do texto e tive que dividir em partes(chunks) e depois juntar tudo(append)
+Nessa parte eu tive um problema com o tamanho do texto e tive que dividir em partes(chunks) e depois juntar tudo(append).
 
-Antes de continuar, lembre-se da regra absoluta para programadores: se funciona, NÂO TOCA.
+Antes de continuar, lembre-se da regra absoluta para programadores: se funciona, NÃO TOCA.
 
 Somente quando o usuário acionar o download do video, o texto vai ser encaminhado para a função com as próximas etapas.
 No caso, vai ser usado um model do Hugging Face para a correção da pontuação e a biblioteca gtts para a criação do audio a partir do transcript traduzido e corrigido.
