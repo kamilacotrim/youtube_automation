@@ -1,4 +1,4 @@
-# youtube_automation
+# Automação do youtube - Parte 1
 
 Informação é um instrumento poderoso que precisa ser bem filtrado. 
 Na pior das hipóteses, você afoga com tanta informação - tanto úteis quanto inúteis -,
