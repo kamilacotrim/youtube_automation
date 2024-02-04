@@ -29,6 +29,8 @@ Não precisa instalar o transformers do Hugging Face porque a biblioteca chamada
 já tem o transformers e pytorch, assim você vai evitar conflitos de dependências.
 
 
+
+
 ```
 import streamlit as st
 from pytube import YouTube
@@ -38,6 +40,11 @@ from transformers import MarianMTModel, MarianTokenizer
 from gtts import gTTS
 import os
 ```
+
+Cada função(def) vai passar um argumento, portanto não se esqueça de pegar esse argumento antes de chamar a função 
+que vai trabalhar com ele ou dentro da própria função só a ativando depois de passar o valor da variável.
+
+Primeiro vamos pegar o transcript de um video do youtube e colocar um exception para mostrar uma mensagem de erro caso não retenha o transcript na variável.
 
 
 ```
@@ -52,6 +59,14 @@ def get_youtube_transcript(video_id):
         st.error(f"Error getting transcript: {e}")
         return None
 ```
+
+Traduza o transcript usando modelos pré-treinados do Hugging Face (se você quiser pode criar o seu próprio modelo, mas isso vai te exigir um pouco mais)
+Nessa parte eu tive um problema com o tamanho do texto e tive que dividir em partes(chunks) e depois juntar tudo(append)
+
+Antes de continuar, lembre-se da regra absoluta para programadores: se funciona, NÂO TOCA.
+
+Somente quando o usuário acionar o download do video, o texto vai ser encaminhado para a função com as próximas etapas.
+No caso, vai ser usado um model do Hugging Face para a correção da pontuação e a biblioteca gtts para a criação do audio a partir do transcript traduzido e corrigido.
 
 
 ```
@@ -126,6 +141,11 @@ def download_video(selected_video, save_path=".", get_transcript=False, create_a
         tts.save(os.path.join(save_path, audio_filename))
         st.audio(audio_filename, format='audio/mp3')
 ```
+
+
+Só depois vai ser preparada a interface do aplicativo usando streamlit depois de finalizar a definição das funções.
+Leia a documentação para incluir checkbox, title, display e audio para ativar as respectivas funções que foram criadas no inicio. 
+Cada if só vai funcionar se a pessoa selecionar o checkbox para cada ação.
 
 
 ```
