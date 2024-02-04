@@ -19,8 +19,8 @@ segunda parte:
 
 terceira parte:
 - Pegue o café e vamos para o código.
-
-
+<br />
+<br />
 
 
 Instale as bibliotecas necessárias. Se você não sabe inglês, dá um google aí.
@@ -60,7 +60,7 @@ def get_youtube_transcript(video_id):
         return None
 ```
 
-Traduza o transcript usando modelos pré-treinados do Hugging Face (se você quiser pode criar o seu próprio modelo, mas isso vai te exigir um pouco mais)
+Traduza o transcript usando modelos pré-treinados do Hugging Face (se você quiser pode criar o seu próprio modelo, mas isso vai te exigir um pouco mais).<br />
 Nessa parte eu tive um problema com o tamanho do texto e tive que dividir em partes(chunks) e depois juntar tudo(append)
 
 Antes de continuar, lembre-se da regra absoluta para programadores: se funciona, NÂO TOCA.
