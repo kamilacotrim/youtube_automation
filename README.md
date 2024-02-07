@@ -159,8 +159,8 @@ if __name__ == "__main__":
         save_path = st.text_input("Enter the path to save the video (default is current directory):", ".")
         
         get_transcript = st.checkbox("Get Transcript")
-        create_audio = st.checkbox("Create audio from translated transcript?")
-        display_video = st.checkbox("Display video?")
+        create_audio = st.checkbox("Create audio from translated transcript")
+        display_video = st.checkbox("Display video")
 
         if st.button("Search and Download") and query and save_path:
             results = YouTube(f"https://www.youtube.com/results?search_query={query}")
@@ -180,8 +180,8 @@ if __name__ == "__main__":
         save_path = st.text_input("Enter the path to save the videos (default is current directory):", ".")
         
         get_transcript = st.checkbox("Get Transcript")
-        create_audio = st.checkbox("Create audio from translated transcript?")
-        display_video = st.checkbox("Display video?")
+        create_audio = st.checkbox("Create audio from translated transcript")
+        display_video = st.checkbox("Display video")
 
         if st.button("Download Videos") and url_list and save_path:
             url_list = url_list.split(",")
@@ -189,3 +189,18 @@ if __name__ == "__main__":
                 selected_video = YouTube(url)
                 download_video(selected_video, save_path, get_transcript, create_audio, display_video)
 ```
+<br />
+Citations
+<br />
+<br />
+@article{guhr-EtAl:2021:fullstop,
+  title={FullStop: Multilingual Deep Models for Punctuation Prediction},
+  author    = {Guhr, Oliver  and  Schumann, Anne-Kathrin  and  Bahrmann, Frank  and  Böhme, Hans Joachim},
+  booktitle      = {Proceedings of the Swiss Text Analytics Conference 2021},
+  month          = {June},
+  year           = {2021},
+  address        = {Winterthur, Switzerland},
+  publisher      = {CEUR Workshop Proceedings},  
+  url       = {http://ceur-ws.org/Vol-2957/sepp_paper4.pdf}
+}
+
