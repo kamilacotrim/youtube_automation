@@ -1,5 +1,3 @@
-theme: jekyll-theme-minimal
-
 # Automação do youtube - Parte 1
 
 Informação é um instrumento poderoso que precisa ser bem filtrado. 
