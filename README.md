@@ -125,7 +125,7 @@ def download_video(selected_video, save_path=".", get_transcript=False, create_a
         st.write(translated_transcript)
 
         # Display in columns
-        col1, col2, col3 = st.beta_columns(3)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.subheader("Original Transcript")
             st.write(transcript)
@@ -156,7 +156,7 @@ if __name__ == "__main__":
 
     if option == "Search for videos":
         query = st.text_input("Enter your search query:")
-        save_path = st.text_input("Enter the path to save the video (default is current directory):", ".")
+        save_path = st.text_input("Enter the path to save the video (default is current directory):")
         
         get_transcript = st.checkbox("Get Transcript")
         create_audio = st.checkbox("Create audio from translated transcript")
