@@ -69,7 +69,7 @@ def download_video(selected_video, save_path=".", get_transcript=False, create_a
         st.write(translated_transcript)
 
         # Display in columns
-        col1, col2, col3 = st.beta_columns(3)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.subheader("Original Transcript")
             st.write(transcript)
@@ -113,11 +113,11 @@ if __name__ == "__main__":
 
     elif option == "Provide list of URLs":
         url_list = st.text_area("Enter a comma-separated list of video URLs:")
-        save_path = st.text_input("Enter the path to save the videos (default is current directory):", ".")
+        save_path = st.text_input("Enter the path to save the videos (default is current directory):")
         
         get_transcript = st.checkbox("Get Transcript")
-        create_audio = st.checkbox("Create audio from translated transcript?")
-        display_video = st.checkbox("Display video?")
+        create_audio = st.checkbox("Create audio from translated transcript")
+        display_video = st.checkbox("Display video")
 
         if st.button("Download Videos") and url_list and save_path:
             url_list = url_list.split(",")
